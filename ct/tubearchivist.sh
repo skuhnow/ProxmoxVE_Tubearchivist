@@ -18,3 +18,18 @@ header_info "$APP"
 variables
 color
 catch_errors
+
+function update_script() {
+  header_info
+  check_container_storage
+  check_container_resources
+}
+
+start
+build_container
+description
+
+msg_ok "Completed successfully!\n"
+echo -e "${CREATING}${GN}${APP} setup has been successfully initialized!${CL}"
+echo -e "${INFO}${YW} Access it using the following URL:${CL}"
+echo -e "${TAB}${GATEWAY}${BGN}http://${IP}:8081${CL}"
