@@ -57,3 +57,13 @@ sed -i "s/- media:/youtube/- ./media:/youtube" docker_compose.yml
 msg_info "Initialize Tubearchivist"
 $STD docker compose --env-file /opt/tubearchivist/.env up -d
 msg_ok "Initialized Tubearchivist"
+
+motd_ssh
+customize
+
+msg_info "Cleaning up"
+apt-get -y autoremove
+apt-get -y autoclean
+msg_ok "Cleaned"
+
+cleanup_lxc
