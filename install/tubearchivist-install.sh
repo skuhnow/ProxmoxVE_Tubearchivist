@@ -61,9 +61,4 @@ msg_ok "Initialized Tubearchivist"
 motd_ssh
 customize
 
-msg_info "Cleaning up"
-apt-get -y autoremove
-apt-get -y autoclean
-msg_ok "Cleaned"
-
 cleanup_lxc

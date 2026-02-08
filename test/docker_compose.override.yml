@@ -1,0 +1,5 @@
+services:
+  tubearchivist:
+    volumes:
+      - ./youtube:/youtube
+      - ./cache:/cache
